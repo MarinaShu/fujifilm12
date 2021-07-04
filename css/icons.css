@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'icon';
+  src:  url('../iconsfont/fonts/icon.eot?hodrnv');
+  src:  url('../iconsfont/fonts/icon.eot?hodrnv#iefix') format('embedded-opentype'),
+    url('../iconsfont/fonts/icon.ttf?hodrnv') format('truetype'),
+    url('../iconsfont/fonts/icon.woff?hodrnv') format('woff'),
+    url('../iconsfont/fonts/icon.svg?hodrnv#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrows-left:before {
+  content: "\e900";
+}
+.icon-arrows-right:before {
+  content: "\e901";
+}
+.icon-arrows-up:before {
+  content: "\e902";
+}
+.icon-basket:before {
+  content: "\e903";
+}
+.icon-car:before {
+  content: "\e904";
+}
+.icon-clock:before {
+  content: "\e905";
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-enter:before {
+  content: "\e907";
+}
+.icon-favorit:before {
+  content: "\e908";
+}
+.icon-instagram:before {
+  content: "\e909";
+}
+.icon-magnifier:before {
+  content: "\e90a";
+}
+.icon-mail:before {
+  content: "\e90b";
+}
+.icon-map:before {
+  content: "\e90c";
+}
+.icon-menu:before {
+  content: "\e90d";
+}
+.icon-phone:before {
+  content: "\e90e";
+}
+.icon-photo:before {
+  content: "\e90f";
+}
+.icon-vk:before {
+  content: "\e910";
+}
+.icon-whatsapp:before {
+  content: "\e911";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-arrow:before {
+  content: "\ea3c";
+}
+.icon-instagram1:before {
+  content: "\ea92";
+}
+.icon-whatsapp1:before {
+  content: "\ea93";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-vk1:before {
+  content: "\ea98";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}

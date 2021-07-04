@@ -1,0 +1,44 @@
+.header__background_left{
+    height: 275px;
+}
+.wrapper{
+    max-width: 1654px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.content{
+    padding: 71px 0 0;
+}
+.title__analog-photo h2{
+    padding: 42.05px 0 56px;
+}
+.content{
+    display: grid;
+    grid-template-columns: 391px 1fr;
+    grid-column-gap: 57px;
+    grid-row-gap: 46px;
+}
+.content_text{
+    max-width: 800px;
+}
+td{
+    padding: 0 40px 8px 0 ;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+p{
+    line-height: 150%;
+}
+
+table {
+    padding-top: 10px;
+}
+li {
+    padding-top: 10px;
+}
+hr{
+    margin-top: 40px;
+}
