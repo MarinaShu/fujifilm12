@@ -1,22 +1,21 @@
-.header__background_left{
-    height: 275px;
-}
 .wrapper{
-    max-width: 1654px;
+    max-width: 1600px;
     padding: 0 20px;
     margin: 0 auto;
 }
-.content{
-    padding: 71px 0 0;
-}
+
 .title__analog-photo h2{
-    padding: 42.05px 0 56px;
+    padding-top: 40px;
+    margin: 20px;
 }
-.content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 57px;
-    grid-row-gap: 46px;
+
+.content__minilab, .content__fotocentr{
+    display: flex;
+    padding: 10px;
+
+}
+.content__minilab p, .content__fotocentr p{
+    padding: 5px 20px;
 }
 .content_text{
     max-width: 800px;
@@ -31,16 +30,19 @@ td{
 
 p{
     line-height: 150%;
+    padding: 10px 0;
 }
 
 table {
     padding-top: 10px;
 }
-li {
-    padding-top: 10px;
+.content__text li {
+    padding: 5px;
+    list-style-type: disc;
+    margin-left: 20px;
 }
 hr{
-    margin-top: 40px;
+    margin-top: 70px;
 }
 .wrapper img{
     width: 100%;
@@ -50,4 +52,19 @@ hr{
 .img{
     max-width: 798px;
     height: 300px;
+}
+
+@media (max-width: 767px){
+    .title__analog-photo h1{
+        padding-top: 0;
+        margin: 20px;
+    }
+    .content__minilab{
+        display: flex;
+        flex-direction: column;
+    }
+    .content__fotocentr{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
