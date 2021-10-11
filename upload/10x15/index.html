@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Печать фотографий</title>
+		<style>.wrapper{ text-align: center; margin:2em; }</style>
+		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+		<style>
+			.button{
+				text-decoration: none; background:#666; padding:.3em 1em; border-radius: .3em; color:#fff;
+			}
+
+			.ajax-reply{
+				margin-top:2em;
+			}
+
+			.image-upload{
+				height: 200px;
+				width: 200px;
+				padding: 5px;
+				margin: 5px;
+			}
+
+			.image-upload img{
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+
+			.image-upload-container{
+				display: inline-flex;
+				flex-flow: wrap;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.image_wrapper{
+				display: flex;
+				flex-direction: column;
+				border: 1px solid #555555;
+				box-shadow: rgba(108, 108, 108, 0.64);
+				height: 320px;
+				width: 220px;
+				margin: 10px;
+			}
+			.center{
+				text-align: center;
+				padding: 0 5px;
+			}
+
+		</style>
+	</head>
+
+<body>
+	<div class="wrapper">
+		<input type="file" multiple="multiple" accept="image/*" id="image-upload-input">
+		<a href="#" class="upload_files button">Далее</a>
+		<div class="ajax-reply"></div>
+		<div class="image-upload-container"></div>
+	</div>
+	
+<script>
+(function($){
+	$('#image-upload-input').on('change', function() {
+		var files = document.getElementById('image-upload-input').files;
+
+		for (var i = 0; i < files.length; i++) {
+			var url = URL.createObjectURL(files[i]);
+			$('.image-upload-container').append('<div class="image_wrapper"><div class="image-upload"><img src='+ url +'></div><form action="" method="post" class="center"><p>Количество фотографий</p><input type="number"></form><button>Удалить</button></div>');
+		}
+	});
+
+var files; // переменная. будет содержать данные файлов
+
+// заполняем переменную данными файлов, при изменении значения file поля
+$('input[type=file]').on('change', function(){
+	files = this.files;
+});
+
+
+// обработка и отправка AJAX запроса при клике на кнопку upload_files
+$('.upload_files').on( 'click', function( event ){
+
+	event.stopPropagation(); // остановка всех текущих JS событий
+	event.preventDefault();  // остановка дефолтного события для текущего элемента - клик для <a> тега
+
+	// ничего не делаем если files пустой
+	if( typeof files == 'undefined' ) return;
+
+	// создадим данные файлов в подходящем для отправки формате
+	var data = new FormData();
+	$.each( files, function( key, value ){
+		data.append( key, value );
+	});
+
+	// добавим переменную идентификатор запроса
+	data.append( 'my_file_upload', 1 );
+
+	// AJAX запрос
+	$.ajax({
+		url         : './submit.php',
+		type        : 'POST',
+		data        : data,
+		cache       : false,
+		dataType    : 'json',
+		// отключаем обработку передаваемых данных, пусть передаются как есть
+		processData : false,
+		// отключаем установку заголовка типа запроса. Так jQuery скажет серверу что это строковой запрос
+		contentType : false,
+		// функция успешного ответа сервера
+		success     : function( respond, status, jqXHR ){
+
+			// ОК
+			if( typeof respond.error === 'undefined' ){
+				// файлы загружены, делаем что-нибудь
+
+    window.location ='../../../forma-mail/index.html';
+
+				// покажем пути к загруженным файлам в блок '.ajax-reply'
+
+				// var files_path = respond.files;
+				// var html = '';
+				// $.each( files_path, function( key, val ){
+				// 	 html += val +'<br>'+ 'фаил загружен';
+				// } )
+				// $('.ajax-reply').html( html );
+			}
+			// error
+			else {
+				console.log('ОШИБКА: ' + respond.error );
+			}
+		},
+		// функция ошибки ответа сервера
+		error: function( jqXHR, status, errorThrown ){
+			console.log( 'ОШИБКА AJAX запроса: ' + status, jqXHR );
+		}
+
+	});
+
+});
+
+})(jQuery)
+</script>
+</body>
+</html>
+
+
+
+
