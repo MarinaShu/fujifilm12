@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <title>Печать фото</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="img/logo-page.png" rel="icon">
     <link href="css/icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/analogPhoto.css" rel="stylesheet">
@@ -11,70 +12,65 @@
     <link href="font/gilroy-medium.ttf" rel="stylesheet">
     <link href="font/gilroy-regular.ttf" rel="stylesheet">
     <link href="font/gilroy-semibold.ttf" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Oswald&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <section class="header">
-        <div class="header__background_right"></div>
-        <div class="header__body">
-            <div class="header__contacts">
-                <a class="header__contacts_phone link" href="tel:89024361122">
-                    <span class="header__icon icon-phone"></span>
-                    <span class="header__link link contacts"> +7 (902) 436-11-22 </span>
-                </a>
-                <a class="header__contacts_map link" href="contact.html">
-                    <span class="header__icon icon-map"></span>
-                    <span class="header__link link contacts">г.Йошкар-Ола, ул. Кремлевская, 26</span>
-                </a>
+<header class="header">
+    <div class="header__container">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png"></a>
+        <div class="header__menu menu">
+            <div class="menu__icon">
+                <span></span>
             </div>
-            <div class="header__info">
-                <a class="header__info_payment link" href="">Оплата и доставка</a>
-                <a class="header__info_about link" href="about.html" >О нас</a>
-            </div>
-        </div>
-        <div>
-            <nav class="nav">
-                <div class="nav__items left">
-                    <div class="nav__item left menu">
-                        <a><span class="icon-menu icon"></span><span class="nav__item_catalog">Каталог</span></a>
-                    </div>
-                    <!--                    <a class="nav__item_left">Дизайн</a>-->
-                    <a class="nav__item_left" href="index.html/#photoPrint">Фотопечать</a>
-                    <a class="nav__item_left" href="analogPhoto.html">Фотоуслуги</a>
-                    <!--                    <a class="nav__item_left">Фотокерамика</a>-->
-                </div>
-                <div class="nav__items">
-                    <div class="nav__item_right">
-                        <a class="icon-clock icon"></a>
-                        <a class="icon-text">Статус заказа</a>
-                    </div>
-                    <div class="nav__item_right">
-                        <a class="icon-basket icon"></a>
-                        <a class="icon-text">Корзина</a>
-                    </div>
-                    <div class="nav__item_right">
-                        <a class="icon-enter icon"></a>
-                        <a class="icon-text">Войти</a>
-                    </div>
-                </div>
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li>
+                        <a href="" class="menu__link">Услуги</a>
+                        <span class="menu__arrow"></span>
+                        <ul class="menu__sub-list">
+                            <li><a class="menu__sub-link" href="index.html#photoPrint">Печать фотографий</a></li>
+                            <li><a class="menu__sub-link" href="analogPhoto.html" target="_blank">Услуги фотоцентра</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="menu__link">Информация</a>
+                        <span class="menu__arrow"></span>
+                        <ul class="menu__sub-list">
+                            <li>
+                                <a href="about.html" class="menu__sub-link">О нас</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="menu__sub-link">Связаться с нами</a>
+                            </li>
+                            <li><a data-goto=".page__section_2" href="https://vk.com/fujifilm_yola" target="_blank" class=" link icon-vk"> ВКонтакте</a></li>
+                            <li><a data-goto=".page__section_2" href="viber://chat?number=%2B79024361122" class="link icon-whatsapp"> Viber</a></li>
+                            <li><a data-goto=".page__section_2" class="link icon-whatsapp1" target="_blank"
+                                   href="https://api.whatsapp.com/send?phone=79024361122&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20FUJIFILM."> WhatsApp</a></li>
+                            <li><a data-goto=".page__section_2" href="mailto:mari-fuji@yandex.ru"  class="link icon-mail nowrap"> Напишите Нам</a></li>
+                        </ul>
+                    </li>
+                    <!--                        <li><a data-goto=".page__section_1" href="#" class="menu__link">Войти</a></li>-->
+                    <!--<li><a data-goto=".page__section_2" href="#" class="menu__link">Корзина</a></li>-->
+                    <li><a data-goto=".page__section_1" class="menu__link icon-map nowrap" href="contact.html" target="_blank"></a></li>
+                    <li><a data-goto=".page__section_1" class="menu__link icon-phone nowrap" href="tel:89024361122"> +7 (902) 436-11-22</a></li>
+                </ul>
             </nav>
-            <div class="header__background_logo">
-                <a href="index.html"><img class="logo"  src="img/logo.png" ></a>
-            </div>
-            <div class="header__background_left"></div>
         </div>
-    </section>
+    </div>
 </header>
 <section class="wrapper">
-    <section class=" title__analog-photo">
-        <h2>Аналоговая (пленочная) фотография</h2>
+    <section class="title__analog-photo">
+        <h1>Аналоговая (пленочная) фотография</h1>
         <p>Данные услуги действуют в салоне фотоцентра</p>
     </section>
     <section class="content">
-        <div><img src="img/developing.jpg"></div>
+        <div><img class="content_img" src="img/developing.jpg"></div>
         <div>
-            <div class="content_text">
-                <h3>Проявка фотопленки и её печать</h3>
+            <div>
+                <h2 class="content_titel">Проявка фотопленки и её печать</h2>
             </div>
             <div>
                 <p>Проявляем цветную фотопленку по технологическому процессу C-41</p>
@@ -84,10 +80,10 @@
                 </table>
             </div>
         </div>
-        <div><img src="img/scanning.jpg"></div>
+        <div><img class="content_img" src="img/scanning.jpg"></div>
         <div class="content_text">
             <div>
-                <h3>Сканирование фотопленки и напечатанных фотоснимков </h3>
+                <h2 class="content_titel">Сканирование фотопленки и напечатанных фотоснимков </h2>
             </div>
             <div>
                 <p>Мы поможем дать новую жизнь старым пленкам и перевести их в формат, более подходящий для длительного хранения.
@@ -96,18 +92,19 @@
                 <p>Разрешиние при сканирование - 4800x9600 dpi 48 bit.</p>
                 <p>Полученные снимки можно будет записать на любой носитель или получить по почте.</p>
                 <table>
-                    <tr><td>Сканирование пленки 12 кадров</td><td class="nowrap">110 ₽  * </td></tr>
-                    <tr><td>Сканирование пленки 24 кадров</td><td class="nowrap">150 ₽  * </td></tr>
-                    <tr><td>Сканирование пленки 36 кадров</td><td class="nowrap">180 ₽  * </td></tr>
-                    <tr><td>Сканирование 1 кадра пленки </td><td class="nowrap">20 ₽  * </td></tr>
-                    <tr><td>Сканирование 1 напечатанной фотографии </td><td class="nowrap">20 ₽  * </td></tr>
+                    <td>Сканирование пленки:</td>
+                    <tr><td>12 кадров</td><td class="nowrap">110 ₽  * </td></tr>
+                    <tr><td>24 кадров</td><td class="nowrap">150 ₽  * </td></tr>
+                    <tr><td>36 кадров</td><td class="nowrap">180 ₽  * </td></tr>
+                    <tr><td> 1 кадра пленки </td><td class="nowrap">20 ₽  * </td></tr>
+                    <tr><td> 1 напечатанной фотографии </td><td class="nowrap">20 ₽  * </td></tr>
                 </table>
             </div>
         </div>
-        <div><img src="img/consultation.jpg"></div>
+        <div><img class="content_img" src="img/consultation.jpg"></div>
         <div class="content_text">
             <div>
-                <h3>Консультация и помощь по пленочной фотографии</h3>
+                <h2 class="content_titel">Консультация и помощь по пленочной фотографии</h2>
             </div>
             <div>
                 <ul>
@@ -119,79 +116,81 @@
                 <table>
                     <tr><td>Стоимость консультации (по предворительной записи)</td><td class="nowrap">300 ₽  * </td></tr>
                 </table>
-                <h5>Запись на консультацию по телефону:
+                <p>Запись на консультацию по телефону:
                     <a class="header__contacts_phone link" href="tel:89024361122">
                         <span class="header__icon icon-phone nowrap">  +7 (902) 436-11-22 </span>
                     </a>
-                </h5>
+                </p>
             </div>
         </div>
-        <div><img src="img/scanning-video.jpg"></div>
-        <div class="content_text">
+        <div><img class="content_img" src="img/scanning-video.jpg"></div>
+        <div class="cotent_text">
             <div>
-                <h3>Сканирование видиокасет</h3>
+                <h2 class="content_titel">Сканирование видиокасет</h2>
             </div>
             <div>
                 <p>У нас вы может заказать перезапись с VHS, VHS-C, mini-DV кассет на любой электронный носитель или на электронную почту.</p>
                 <p>Так же возможно записать DVD диск, который можно просмотреть на любом DVD-плеере.</p>
-                <p>Типы видеоносителей, принимаемые для оцифровки: </p>
-                <ul>
-                    <li>VHS</li>
-                    <li>mini-DV</li>
-                    <li>видеокассета 8mm</li>
-                </ul>
+                <p>Типы видеоносителей, принимаемые для оцифровки: VHS, mini-DV, видеокассета 8mm</p>
                 <table>
                     <tr><td>Перезапись касеты  1 минута</td><td class="nowrap">5 ₽  * </td></tr>
                     <tr><td>Перезапись касеты  меньше 20 минут</td><td class="nowrap">100 ₽  * </td></tr>
                 </table>
             </div>
         </div>
-
     </section>
-</section>
+    <table class="star">
+        <td>* Запись информации на электронный носитель</td>
+        <tr><td>до 50 Mb</td><td class="nowrap">30 ₽</td></tr>
+        <tr><td>от 100 Mb - 1 Gb</td><td class="nowrap">50 ₽</td></tr>
+        <tr><td>от 1 Gb - 4 Gb</td><td class="nowrap">70 ₽</td></tr>
+        <tr><td>от 4 Gb - 5 Gb</td><td class="nowrap">100 ₽</td></tr>
+        <tr><td>от 4 Gb </td><td class="nowrap">150 ₽</td></tr>
+    </table>
 
+</section>
 <hr>
-<a href="" id="buttonUp" class="arrow__up"><img src="img/vector.svg" alt=""></a>
 <footer class="footer">
     <div class="footer__wrapper">
+
         <div class="footer__contacts columns">
-            <a  href="#top"><img class="footer__contacts_img " src="img/logo.png"></a>
-            <a class="footer__contacts_text "> Фотоцентр. Печать, дизайн и продажа фототоваров.</a>
-            <a href="" class="icon-map link">  Йошкар-Ола, ул. Кремлевская, 26</a>
-            <a href="tel:89024361122" class="icon-phone footer__info_contacts link">   +7 (902) 436-11-22</a>
+            <a href="#top"><img class="footer__contacts_img " src="img/logo.png"></a>
+            <a class="footer__contacts_text link"> Фотоцентр. Печать, дизайн и продажа фототоваров.</a>
+            <a href="contact.html" class="icon-map link">  Йошкар-Ола, <span class="nowrap">ул. Кремлевская, 26</span> </a>
+            <a href="tel:89024361122" class="icon-phone footer__info_contacts link nowrap">   +7 (902) 436-11-22</a>
             <a href="" class="footer__text_info link">www.fujifilm12.ru</a>
         </div>
-        <div class="footer_menu columns">
-            <h5>Меню</h5>
-            <a href="" class="footer_menu_service link">Дизайн</a>
-            <a href="" class="footer_menu_service link">Фотопечать</a>
-            <a href="analogPhoto.html" class="footer_menu_service link">Фотоуслуги</a>
-            <a href="" class="footer_menu_service link">Фотокерамика</a>
+
+        <div class="column_contaсt">
+            <div class="footer__info columns">
+                <h5>Каталог</h5>
+                <div class="footer__contacts_accordion columns">
+                    <!--            <a href="" class="footer_menu_service link">Дизайн</a>-->
+                    <a href="#photoPrint" class="footer_menu_service link">Фотопечать</a>
+                    <a href="analogPhoto.html" class="footer_menu_service link">Фотоуслуги</a>
+                    <!--            <a href="" class="footer_menu_service link">Фотокерамика</a>-->
+                </div>
+            </div>
+            <div class="footer__info columns">
+                <h5>Информация</h5>
+                <div class="footer__contacts_accordion columns">
+                    <a href="about.html" class=" link">О нас</a>
+                    <a href="contact.html" class=" link nowrap">Связаться с нами</a>
+                    <a href="privacyPolicy.html" class=" link">Условия соглашения</a>
+                </div>
+            </div>
+            <div class="footer__info columns">
+                <h5>Контакты</h5>
+                <div class="footer__contacts_accordion columns">
+                    <a href="https://vk.com/fujifilm_yola" target="_blank" class=" link icon-vk"> ВКонтакте</a>
+                    <a href="mailto:mari-fuji@yandex.ru"  class="link icon-mail nowrap"> mari-fuji@yandex.ru</a>
+                    <a href="viber://chat?number=%2B79024361122" class="link icon-whatsapp"> Viber</a>
+                    <a class="link icon-whatsapp1" target="_blank" href="https://api.whatsapp.com/send?phone=79024361122&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20FUJIFILM."> WhatsApp</a>
+                </div>
+            </div>
         </div>
-        <div class="footer__info columns">
-            <h5>Информация</h5>
-            <a href="about.html" class="footer__info link">О нас</a>
-            <a href="contact.html" class="footer__info link">Связаться с нами</a>
-            <a href="privacyPolicy.html" class="footer__info link">Условия соглашения</a>
-        </div>
-        <div class="footer__info columns">
-            <h5>Информация</h5>
-            <a href="https://vk.com/fujifilm_yola" target="_blank" class="footer__info link icon-vk"> ВКонтакте</a>
-            <a href="mailto:mari-fuji@yandex.ru"  class="footer__info link icon-mail"> mari-fuji@yandex.ru</a>
-            <a href="viber://chat?number=%2B79024361122" class="footer__info link icon-whatsapp"> Viber</a>
-            <a href="https://api.whatsapp.com/send?phone=79024361122&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20FUJIFILM." class="footer__info link icon-whatsapp1"> WhatsApp</a>
-        </div>
-        <div class="footer__form columns">
-            <h5>Оставайся в курсе</h5>
-            <form action="/php/form_handler.php" method="post" class="forms">
-                <section class="form">
-                    <input type="text" name="email" placeholder="Ваш Email" class="footer__form_size email">
-                    <button href="" type="submit" class="button-form js_button icon-mail"></button>
-                </section>
-            </form>
-        </div>
-    </div>
 </footer>
+<a href="" id="buttonUp" class="arrow__up"><img src="img/vector.svg" alt=""></a>
 <script src="js/app.js"></script>
 </body>
 </html>
